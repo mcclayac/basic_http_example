@@ -1,0 +1,15 @@
+
+#  Build the latest service
+$ docker build . -t mcclayac/basic_http_example
+
+
+# Run the service server name basic_http_example
+$ docker run -d --name basic_http_example -p 7070:7070 mcclayac/basic_http_example:latest
+52f6e922e638bc0b7b31e91b5a670b3aff180c96b957ca2b625300d25fb83b9e
+
+
+# Verify the server is running
+Anthonys-MacBook-Pro:basic_http_example mcclayac$ docker container ls | grep basic_http_example
+52f6e922e638        mcclayac/basic_http_example:latest   "basic_http_example"     22 seconds ago      Up 21 seconds       0.0.0.0:7070->7070/tcp   basic_http_example
+
+
